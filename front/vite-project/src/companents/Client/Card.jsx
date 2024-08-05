@@ -12,7 +12,7 @@ const Card = ({ item }) => {
                 <Link to={`prod/${item._id}`}> <img class="card-img-top" src={item.image} alt="Card image cap" />
                 </Link>
                 <div class="card-body">
-                    <Link style={{ textDecoration: "none", color: "black" }}> <h5 class="card-title">{item.title}</h5></Link>
+                    <Link style={{ textDecoration: "none", color: "black" }}> <h5 class="card-title">{item.title.slice(0,30)}...</h5></Link>
                     <p className="card-text" style={{ fontWeight: "bold", fontSize: "23px" }}>
                         {item.price}$$ <span style={{ color: "gray", }}>{item.isCount ? (item.price - (item.price * item.isCount / 100)) : ""}</span>
                     </p>

@@ -10,4 +10,17 @@
 
 .card{
     max-height: 600px !important;
+   img{
+    height: 300px;
+   }
+}
+
+.main__selects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    :first select{
+        border: 1px solid orangered;
+    }
 }

@@ -1,0 +1,13 @@
+.last_top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.free{
+    width: 100px;
+    height: 6px;
+    background-color: red;
+}

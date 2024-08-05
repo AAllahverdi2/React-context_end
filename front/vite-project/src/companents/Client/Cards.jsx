@@ -1,13 +1,14 @@
 import React, { useContext } from 'react'
 import mainContext from '../../Context/Context'
 import Card from './Card'
-
+import "./Cards.scss"
 const Cards = () => {
     const {data,handlerFilterByCategory,handlerSearch,handlerFilterByPrice}=useContext(mainContext)
   return (
     <div className='container' style={{marginTop:"20px"}}>
        
-       <select style={{width:"200px", height:"40px"}} name="" id="" onChange={(e) => handlerFilterByCategory(e)}>
+      <div className='main__selects'>
+      <select style={{width:"200px", height:"40px"}} name="" id="" onChange={(e) => handlerFilterByCategory(e)}>
         <option value="df">Default</option>
         <option value="accessories">accessories</option>
         <option value="women">women</option>
@@ -23,6 +24,7 @@ const Cards = () => {
       <input style={{width:"200px", height:"40px", marginLeft:"20px"}} type="text"  placeholder='search by product name' onChange={(e)=>{
         handlerSearch(e.target.value)
       }}/>
+      </div>
         <div className="row" style={{marginTop:"20px"}}>
             {
                 data.map((item,index)=>{

@@ -84,9 +84,9 @@ const App = () => {
 
 
   function addToWishList(prod) {
-    const targetIndex = wishList.findIndex((item) => item._id === prod.id)
+    const targetIndex = wishList.findIndex((item) => item._id === prod._id)
     if (targetIndex !== -1) {
-      const updatedWishList = wishList.filter((item) => item._id !== prod.id)
+      const updatedWishList = wishList.filter((item) => item._id !== prod._id)
       setWishList(updatedWishList)
       localStorage.setItem("fav", JSON.stringify(updatedWishList))
       toast.success("deleted item")
